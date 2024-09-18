@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registreringsskjema</title>
+</head>
+<body>
+    <header>
+        <h1>Øvelse 3 Nettside</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="validering.html">Valideringsoppgave</a></li>
+                <li><a href="mal.html">Nettside-mal</a></li>
+                <li><a href="kontakt.html">Kontakt Oss</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Registrer deg her:</h2>
+            <form method="post">
+                <label for="navn">Navn:</label>
+                <input type="text" name="navn" placeholder="Skriv ditt navn her..." id="navn" minlength="2" maxlength="45" pattern="[A-Za-zæøåÆØÅ ]{2,}" required>
+                <label for="epost">E-post:</label>
+                <input type="email" name="epost" placeholder="Skriv din epost her..." id="epost" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+                <label for="password">Passord:</label>
+                <input type="password" name="password" placeholder="Lag et passord her..." id="password" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                <label for="age">Din alder:</label>
+                <input type="number" name="age" placeholder="Skriv din alder her..." id="age" min="18" max="99" required>
+                <label for="tlf">Telefonnummer:</label>
+                <input type="tel" name="tlf" placeholder="Skriv ditt telefonnummer her..." id="tlf" pattern="[0-9]{8,12}" minlength="8" maxlength="12" required>
+                <label for="date">Dato:</label>
+                <input type="date" name="date" id="date" max="2023-12-31" required>
+                <label>Ditt Kjønn:</label>
+                <label for="kjonnM">Mann</label>
+                <input type="radio" name="kjonn" id="kjonnM" required>
+                <label for="kjonnK">Kvinne</label>
+                <input type="radio" name="kjonn" id="kjonnK" required>
+                <label for="kjonnA">Annet</label>
+                <input type="radio" name="kjonn" id="kjonnA" required>
+                <label for="land">Ditt land:</label>
+                <select name="land" id="land">
+                    <option value="norge">Norge</option>
+                    <option value="sverige">Sverige</option>
+                    <option value="danmark">Danmark</option>
+                </select>
+
+                <label for="personvern">Personvern:</label>
+                <input type="checkbox" name="personvern" id="personvern" required>
+
+                <input type="submit" value="Send melding">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Snorre Abel Spillum</p>
+        <p>snorreas@hiof.no</p>
+    </footer>
+</body>
+</html>
