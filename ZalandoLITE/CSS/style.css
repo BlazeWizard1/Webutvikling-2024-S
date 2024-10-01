@@ -17,6 +17,7 @@ img{
 .flex-menu{
     display: flex;
     list-style: none;
+    width: 100%;
     gap: 1rem;
     padding: 0;
     margin: 0;
