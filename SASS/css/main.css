@@ -1,0 +1,20 @@
+form {
+  background-color: #fff;
+  padding: 3rem;
+  color: #383838;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-radius: 30px;
+}
+form input {
+  padding: 1rem;
+  border: 1px solid #383838;
+}
+
+body {
+  background-color: rgb(116, 116, 204);
+  height: 100vh;
+}/*# sourceMappingURL=main.css.map */

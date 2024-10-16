@@ -1,0 +1,166 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+}
+
+#flexcontainer{
+    background-color: lightgray;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: space-around;
+}
+
+#flexmenu{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    list-style: none;
+
+    align-items: center;
+    justify-content: space-around;
+
+    margin: 0;
+    padding: 0;
+
+    a{
+        color: #000;
+        text-decoration: none;
+    }
+}
+
+.btn{
+    display: block;
+    outline: 2px solid #fff;   
+    padding: 1rem;
+    margin: 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.card{
+    background-color: cornflowerblue;
+}
+
+.graycard{
+    background-color: lightgray;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+#booking{
+    background-color: cornflowerblue;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+figure{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    height: auto;
+    padding: 1rem;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+footer{
+    background-color: gray;
+    padding: 1rem;
+}
+
+#flexmenu2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.flexmenu-footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+
+    h3{
+        margin:0;
+    }
+}
+
+@media only screen and (min-width:680px){
+    #flexcontainer{
+        flex-direction: row;
+        justify-content: space-between;
+
+        padding: 1rem;
+    }
+    
+    #flexmenu{
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .flexmenu-main{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: fill;
+
+        padding: 0;
+
+        section{
+            width: 50%;
+            height: auto;
+            padding: 0;
+            align-content: center;
+
+            p,h2,a{
+                margin: 1rem;
+            }
+        }
+
+        picture{
+            width:50%;
+        }
+
+    }
+    #change-order{
+        flex-direction: row-reverse;
+    }
+
+    #tjenester{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        justify-content: space-around;
+
+        h2{
+            width: 100%;
+        }
+        article{
+            max-width: 200px;
+            height: auto;
+        }
+    }
+}
