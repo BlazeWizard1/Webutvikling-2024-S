@@ -1,0 +1,209 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.category-card{
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 25px;
+    background-color: $white;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+*:focus{
+    border-width: thick;
+    border-color: #000;
+}
+
+body{
+    font-family: $mainfont;
+}
+
+.logo{
+    @include flexbox(wrap, row, 0, space-around);
+    
+    img{
+        border-radius: 100%;
+    }
+}
+
+.flex-menu{
+    @include flexbox(wrap, row, 0, space-around);
+    @include box(auto, auto, 0, 1rem, 75px);
+
+    align-items: center;
+    bottom: 1rem;
+    list-style: none;
+    position: fixed;
+    background-color: $blue;
+
+    i{
+        color: $black;
+    }
+}
+
+.skip{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    ul{
+        list-style: none;
+
+        li{
+            a{
+                position: absolute;
+                left: -9999px;
+
+                &:focus{
+                    position: static;
+                    left: auto;
+                    margin: 1rem;
+                    padding: 0.5rem 1rem;
+                    background-color: #fff;
+                    border-radius: 4px;
+                    z-index: 1000;
+                    text-decoration: none;
+                    color: #000;
+                }
+            }
+
+            a:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+#welcome-banner{
+    @include box(auto, auto, 0, 4rem, 50px);
+    background-image: url("https://picsum.photos/800/800");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    header{
+        @include flexbox(wrap, column, 0.5rem, space-around);
+        text-align: center;
+    }
+}
+
+.btn{
+    @include box(150px, auto, 0, 1rem, 50px);
+    background-color: $black;
+    color: $white;
+    text-decoration: none;
+    align-self: center;
+}
+
+#categories{
+    @include grid(1fr 1fr, auto auto);
+
+    #el{
+        @include grid-position("1/2", "2/4");
+        @extend .category-card;
+    }
+
+    #fashion{
+        @include grid-position("2/3", "2/3");
+        @extend .category-card;
+    }
+
+    #home{
+        @include grid-position("2/3", "3/4");
+        @extend .category-card;
+    }
+}
+
+#news{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* Hva: Setter layouten til flex med wrap for nyhetsseksjonen.
+       Hvorfor: For å gjøre det enkelt å pakke inn artikler på mindre skjermer.
+       Hvordan: Flexbox brukes for layout, med gap for avstand mellom artikler.
+    */
+
+    .scroll-container{
+        display: flex;
+        gap: 1rem;
+        overflow: scroll;
+        /* Hva: Gjør det mulig å scrolle horisontalt gjennom nyheter.
+           Hvorfor: For å vise flere artikler uten å ta mye vertikal plass.
+           Hvordan: Bruker overflow: scroll for å lage horisontal scrolling.
+        */
+
+        article{
+            min-width: 250px;
+
+            a{
+                position: relative;
+                display: inline-block;
+                color: #fff;
+                i{
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    font-size: 30px;
+                }
+            }
+            /* Hva: Styler lenker i nyhetsartiklene.
+               Hvorfor: For å gjøre favorittikonet synlig i hvert produktbilde.
+               Hvordan: Posisjonerer ikonene absolutt i hjørnet av bildet.
+            */
+
+            ul{
+                list-style: none;
+                padding: 0;
+                margin: 0.5rem 0;
+                li{
+                    &:first-child {
+                        color: #000000;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            /* Hva: Fjerner listeoppsett og legger til styling for produktinfo.
+               Hvorfor: For et renere, listefritt oppsett.
+               Hvordan: Setter list-style til none og legger til tekstendringer.
+            */
+        }
+    }
+
+    h2{
+        width: 100%;
+        margin: 0;
+    }
+}
+
+#popular{
+    @include flexbox(wrap, row, 0.2rem, space-around);
+
+    article{
+        img{
+            @include box(auto, auto, 0, 0.5rem, 25px);
+        }
+    }
+
+
+    h2{
+        width: 100%;
+    }
+}
+
+footer{
+    margin-bottom:100px;
+}
+
+.some{
+    @include flexbox(wrap, row, 1rem, center);
+    padding: 1rem;
+    margin: 0;
+    list-style: none;
+}
+
+img{
+    width: 100%;
+    max-width: 175px;
+}

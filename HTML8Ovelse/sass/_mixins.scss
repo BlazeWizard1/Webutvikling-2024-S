@@ -1,0 +1,27 @@
+@mixin flexbox($wrap, $direction, $gap, $content){
+    display: flex;
+    flex-wrap: $wrap;
+    flex-direction: $direction;
+    gap: $gap;
+    justify-content: $content;
+}
+
+@mixin box($width, $height, $margin, $padding, $bRadius){
+    width: 100%;
+    max-width: $width;
+    height: $height;
+    margin: $margin;
+    padding: $padding;
+    border-radius: $bRadius;
+}
+
+@mixin grid($tempcol, $temprow){
+    display: grid;
+    grid-template-columns: $tempcol;
+    grid-template-rows: $temprow;
+}
+
+@mixin grid-position($column, $row){
+    grid-column: #{$column};
+    grid-row: #{$row};
+}
