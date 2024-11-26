@@ -1,0 +1,132 @@
+@use "fonts" as *;
+@use "colors" as *;
+@use "mixin" as *;
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: $mainFont, $otherFont;
+    margin: 0.5rem;
+}
+
+a{
+    text-decoration: none;
+    color: $black;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+img{
+    width: 100%;
+    background-size: cover;
+}
+
+#main-header-nav{
+    ul{
+        @include flexbox(wrap, column, 1rem)
+    }
+}
+
+#search{
+    input{
+        border-color: $black;
+        border-style: solid;
+        padding: 0.5rem;
+        background-color: $white;
+    }
+}
+
+#banner{
+    text-align: right;
+    padding: 2rem;
+    background-image: url("https://picsum.photos/200/300");
+    background-size: cover;
+    h2, p{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    a{
+        background-color: $white;
+        background-size: contain;
+        padding: 1rem;
+        text-align: right;
+    }
+}
+
+#popular{
+    nav{
+        ul{
+            @include flexbox(wrap, row, 0.5rem);
+            justify-content: space-between;
+            li{
+                @include flexbox(nowrap, row, 0);
+                @include outline(solid, 1px);
+                align-items: center;
+                width: 30%;
+                height: 50px;
+                padding: 1rem;
+            }
+        }
+    }
+}
+
+.produktkort{
+    a{
+        @include flexbox(wrap, row, 1rem);
+        justify-content: space-between;
+        width: 100%;
+        padding: 2rem; 
+    }
+}
+
+#category{
+    @include flexbox(wrap, column, 1rem);
+    li{
+        @include flexbox(nowrap, row, 0);
+        @include outline(solid, 1px);
+        text-align: center;
+        width: auto;
+        a{
+            width: 100%;
+            padding: 5rem;
+        }
+    }
+}
+
+#anmeldelser{
+    @include flexbox(wrap, column, 1rem);
+
+    article{
+        @include outline(solid, 1px);
+        padding: 1rem;
+        img{
+            max-width: 150px;
+        }
+    }
+}
+
+#breadcrumb{
+    @include flexbox(wrap, row, 0.5rem);
+}
+
+.form-space{
+    @include flexbox(wrap, column, 0.5rem);
+    input{
+        border-style: solid;
+        border-color: $black;
+        border-width: 1px;
+        padding: 1rem;
+    }
+    input[type="submit"], input[type="button"]{
+        width: 30%;
+        background-color: $darkgray;
+        color: $white;
+    }
+}

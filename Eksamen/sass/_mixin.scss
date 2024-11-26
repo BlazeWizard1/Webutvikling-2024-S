@@ -1,0 +1,11 @@
+@mixin flexbox($wrap, $direction, $gap){
+    display: flex;
+    flex-wrap: $wrap;
+    flex-direction: $direction;
+    gap: $gap;
+}
+
+@mixin outline($style, $width){
+    outline-style: $style;
+    outline-width: $width;
+}
