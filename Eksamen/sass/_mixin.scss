@@ -5,6 +5,17 @@
     gap: $gap;
 }
 
+@mixin grid($tempcol, $temprow){
+    display: grid;
+    grid-template-columns: $tempcol;
+    grid-template-rows: $temprow;
+}
+
+@mixin grid-position($column, $row){
+    grid-column: #{$column};
+    grid-row: #{$row};
+}
+
 @mixin outline($style, $width){
     outline-style: $style;
     outline-width: $width;
