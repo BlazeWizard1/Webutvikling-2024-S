@@ -41,22 +41,42 @@
                 <article class="produktkort-s">
                     <a href="product.html">
                         <img src="https://picsum.photos/1000" alt="Produktkort">
-                        <section>
-                            <h3>Product Name</h3>
-                            <p>Kr 1999</p>
-                            <p>Farge: beige</p>
-                        </section>
                     </a>
+                    <section>
+                        <h3>Product Name</h3>
+                        <p>Kr 1999</p>
+                        <p>Farge: beige</p>
+                        <form>
+                            <select name="size2" id="size2">
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
+                            <input type="number" placeholder="Amount" id="amount">
+                        </form>
+                    </section>
                 </article>
                 <article class="produktkort-s">
                     <a href="product.html">
                         <img src="https://picsum.photos/1000" alt="Produktkort">
-                        <section>
-                            <h3>Product Name</h3>
-                            <p>Kr 1999</p>
-                            <p>Farge: beige</p>
-                        </section>
                     </a>
+                    <section>
+                        <h3>Product Name</h3>
+                        <p>Kr 1999</p>
+                        <p>Farge: beige</p>
+                        <form>
+                            <select name="size-2" id="size-2">
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
+                            <input type="number" placeholder="Amount" id="amount-2">
+                        </form>
+                    </section>
                 </article>
             </section>
             <section>
@@ -75,19 +95,19 @@
                 <h3>3. LEVERING</h3>
                 <h4>Leveringsvalg</h4>
                 <form class="form-space" id="levering">
-                    <label for="exhjem"><input type="radio" id="exhjem" name="levering" value="Express Hjemlevering">Express Hjemlevering<p>3-4 virkedager</p></label>
-                    <label for="exut"><input type="radio" id="exut" name="levering" value="Express Pakke til utleveringssted">Express Pakke til utleveringssted<p>1-3 virkedager</p></label>
-                    <label for="shjem"><input type="radio" id="shjem" name="levering" value="Standard Hjemlevering">Standard Hjemlevering<p>5-8 virkedager</p></label>
+                    <label for="exhjem"><input type="radio" id="exhjem" name="levering" value="Express Hjemlevering">Express Hjemlevering</label>
+                    <label for="exut"><input type="radio" id="exut" name="levering" value="Express Pakke til utleveringssted">Express Pakke til utleveringssted</label>
+                    <label for="shjem"><input type="radio" id="shjem" name="levering" value="Standard Hjemlevering">Standard Hjemlevering</label>
                 </form>
             </section>
             <section>
                 <h3>4. BETALING</h3>
                 <h4>Betal med kort</h4>
                 <form class="form-space" id="betaling">
-                    <label for="kort"><p>Kortnummer</p><input type="number" id="kort" placeholder="342342****4435"></label>
-                    <label for="dato"><p>Utløpsdato</p><input type="date" id="dato"></label>
-                    <label for="cvv"><p>CVC/CVV</p><input type="number" id="cvv" placeholder="CVC/CVV"></label>
-                    <label id="sum"><p>Å betale inkl. mva.</p><p id="pristekst">1 199 kr</p></label>
+                    <label for="kort">Kortnummer<input type="number" id="kort" placeholder="342342****4435"></label>
+                    <label for="dato">Utløpsdato<input type="date" id="dato"></label>
+                    <label for="cvv">CVC/CVV<input type="number" id="cvv" placeholder="CVC/CVV"></label>
+                    <label id="sum">Å betale inkl. mva. 1 199 kr</label>
                     <input type="submit" value="Fullfør kjøp" id="kjop">
                     <label id="bekreft">Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.</label>
                     <label for="nyhet"><input type="checkbox" id="nyhet">Ja takk! Send nyhetsbrev til meg.</label> 
